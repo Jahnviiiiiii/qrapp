@@ -1,4 +1,4 @@
-# qrapp
+# qrapplication
 
 A new Flutter project.
 
