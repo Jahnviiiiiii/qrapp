@@ -5,7 +5,7 @@ import 'package:qrapplication/view_page.dart';
 void main() {
   runApp(const MaterialApp(
     home:
-    ViewPage(),
+    Loginpage(),
   ));
 }
 
