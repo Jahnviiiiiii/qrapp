@@ -1,4 +1,9 @@
+// THE INFORMATION OF SCANNED QR WILL BE PRESENTED HERE
+
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+
 class ViewPage extends StatefulWidget {
   const ViewPage({super.key});
 
@@ -10,47 +15,21 @@ class _ViewPageState extends State<ViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan,
       body: Center(
-        child:Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Image.network("https://cdn2.iconfinder.com/data/icons/outlined-set-1/29/people-512.png",height: 100, width: 150,),
-        SizedBox(height:50,),
-            RichText(
-              text: TextSpan(
-                  style: TextStyle(fontSize: 22, color: Colors.black),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'Name',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ]
-              ),
+            CircleAvatar(radius: 50, child: Image.asset('images/puppy.jpg')),
+            Text('Name'),
+            Text('flutter developer'),
+            TextField(
+              decoration: InputDecoration(border: OutlineInputBorder()),
             ),
-            RichText(
-              text: TextSpan(
-                  style: TextStyle(fontSize: 22, color: Colors.black),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'flutter developer',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ]
-              ),
+            TextField(
+              decoration: InputDecoration(border: OutlineInputBorder()),
             ),
-
-
-        ],
-      ),
+          ],
+        ),
       ),
     );
   }

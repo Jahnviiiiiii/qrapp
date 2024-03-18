@@ -1,12 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:qrapplication/loginpage.dart';
-import 'package:qrapplication/view_page.dart';
+import 'package:qr_app1/login_page.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home:
-    Loginpage(),
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: LoginPage(),
   ));
 }
-
-
