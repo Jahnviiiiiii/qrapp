@@ -22,11 +22,11 @@ class _registrationState extends State<registration> {
     Uri uri= Uri.parse('https://scnner-web.onrender.com/api/register');
     var response = await http.post(uri,
    headers:<String,String>{
-      'content-type':'application/json; charset=UFT-8',
+      'content-type':'application/json; charset=utf-8',
    },
         body: jsonEncode({
           'name':_name.text,
-          'phone':_num.text,
+          'rollno':_num.text,
           'email':_email.text,
           'password':_password.text
         }));
@@ -36,7 +36,7 @@ class _registrationState extends State<registration> {
     print(data['message']);
 
     if (response.statusCode==200){
-      Navigator.push(context, MaterialPageRoute(builder:(context)=>const Loginpage()));
+      Navigator.push(context, MaterialPageRoute(builder:(context)=>const loginpage()));
 
   }else {
      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('REGISTRARION FAILED')),);
